@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "start:frontend": "parcel src/index.html",
+    "start:backend": "json-server db.json",
+    "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "build": "parcel build src/index.html --public-url /team_project"
   },
   "keywords": [],
@@ -16,7 +18,17 @@
     "parcel-transformer-hbs": "^1.0.4"
   },
   "dependencies": {
+    "concurrently": "^10.0.6",
     "dotenv": "^18.0.8",
-    "handlebars": "^4.7.10"
+    "handlebars": "^4.7.10",
+    "json-server": "^1.0.0-beta.15"
+  },
+    "proxy": {
+    "/api": {
+      "target": "http://localhost:3000",
+      "rewrite": {
+        "^/api": ""
+      }
+    }
   }
 }
