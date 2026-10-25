@@ -1,13 +1,49 @@
 <section class="hero">
-  <div class="hero__container">
+  <div class="container">
     <h1 class="hero__title">{{title}}</h1>
     <h2 class="hero__text-subtitle">{{subtitle}}</h2>
     <div class="hero__wrapper">
-        <p class="hero__desc">{{desc}}</p>
-        <div class="hero__features">
-            <h3 class="hero__features-title">Переваги цього місця:</h3>
-            ul
-        </div>
+      <p class="hero__desc">{{desc}}</p>
+      <div class="hero__features">
+        <h3 class="hero__features-title">Переваги цього місця:</h3>
+        <ul class="hero__features-list">
+          {{#each items}}
+            <li class="hero__features-list__item">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
     </div>
+  </div>
+</section>
+<section class="map">
+  <div class="container">
+    <iframe src="src="https://maps.google.com/maps?q={{lat}},{{lng}}&z=14&output=embed"" frameborder="0"></iframe>
+  </div>
+</section>
+<section class="gallery">
+  <div class="container">
+    <ul class="gallery__list">
+      {{#each photos}}
+        <li class="gallery__list-item">{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+<section class="calendar">
+  <div class="container">
+    <ul class="calendar__list">
+      <li class="calendar__item" data-month-num="0">Січень</li>
+      <li class="calendar__item" data-month-num="1">Лютий</li>
+      <li class="calendar__item" data-month-num="2">Березень</li>
+      <li class="calendar__item" data-month-num="3">Квітень</li>
+      <li class="calendar__item" data-month-num="4">Травень</li>
+      <li class="calendar__item" data-month-num="5">Червень</li>
+      <li class="calendar__item" data-month-num="6">Липень</li>
+      <li class="calendar__item" data-month-num="7">Серпень</li>
+      <li class="calendar__item" data-month-num="8">Вересень</li>
+      <li class="calendar__item" data-month-num="9">Жовтень</li>
+      <li class="calendar__item" data-month-num="10">Листопад</li>
+      <li class="calendar__item" data-month-num="11">Грудень</li>
+    </ul>
   </div>
 </section>
