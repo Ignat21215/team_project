@@ -1,3 +1,6 @@
-@use './utils/variables';
-@use './base/reset';
-@use './base/base';
+@use "./utils/variables";
+@use "./base/reset";
+@use "./base/base";
+@use "./components/container";
+@use "./components/header";
+@use "./components/footer";
