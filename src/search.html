@@ -1,22 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
+      <div class="container header__container">
+        <nav class="header__nav">
+          <a href="#" class="header__logo">
+            <!--<svg class="header__logo-icon"><use href="#"></use></svg>-->
+            Surf & Travel
+          </a>
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="./index.html" class="header__link">
+                <svg class="header__icon">
+                  <use href="#"></use>
+                </svg>
+                Tipi di Vacanze
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="./search.html" class="header__link">
+                <svg class="header__icon">
+                  <use href="#"></use>
+                </svg>
+                Destinazioni
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="./desc.html" class="header__link">
+                <svg class="header__icon">
+                  <use href="#"></use>
+                </svg>
+                Sistemazioni
+              </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">About</a>
+            </li>
+          </ul>
+          <button type="button" class="header__button">Prenota</button>
+        </nav>
 
+        <div class="header__hero">
+          <h1 class="header__title">La tua prossima avventura inizia oggi.</h1>
+        </div>
+      </div>
     </header>
     <main>
         <section class="searching">
             <div class="container">
                 <h2 class="searching__title title">Яка наступная точка призначення?</h2>
-                <p class="searching__subtitle">У який куточок світу ти хочеш вирушити? Шукай серед понад 200 доступних
+                <p class="searching__subtitle subtitle">У який куточок світу ти хочеш вирушити? Шукай серед понад 200 доступних
                     напрямків.
                 </p>
                 <div class="searching__wrapper">
@@ -94,7 +134,136 @@
             </div>
         </section>
     </main>
-    <script src="./js/index.js"></script>
-</body>
+    <footer class="footer">
+      <div class="container"></div>
+      <div class="footer__section footer__section--newsletter">
+        <form class="footer__form">
+          <h2 class="footer__form-title">
+            Iscriviti alla
+            <span class="footer__form-title--highlight">Newsletter</span>
+          </h2>
+          <input
+            type="text"
+            name="name"
+            class="footer__input"
+            placeholder="Nome e Cognome"
+          />
+          <input
+            type="email"
+            name="email"
+            class="footer__input"
+            placeholder="Indirizzo e-mail"
+          />
+          <button type="button" class="footer__button">
+            Voglio iscrivermi!
+          </button>
+        </form>
+      </div>
 
+      <div class="footer__section footer__section--info">
+        <div class="footer__brand">
+          <h2 class="footer__brand-name">Surf & Travel</h2>
+          <h3 class="footer__brand-slogan">Surf & Travel Agency</h3>
+          <p class="footer__brand-description">
+            Tutte le destinazioni selezionate per la tua prossima vacanza Surf e
+            non solo.
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="Menu principale">
+          <h3 class="footer__nav-title">Menu</h3>
+          <ul class="footer__nav-list">
+            <li>
+              <a href="#" class="footer__nav-link">
+                <svg class="footer__nav-icon">
+                  <use href="#"></use>
+                </svg>
+                Vacanze Surf</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer__nav-link">
+                <svg class="footer__nav-icon">
+                  <use href="#"></use>
+                </svg>
+                Destinazioni</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer__nav-link">
+                <svg class="footer__nav-icon">
+                  <use href="#"></use>
+                </svg>
+                Destinazioni</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer__nav-link">
+                <svg class="footer__nav-icon">
+                  <use href="#"></use>
+                </svg>
+                About</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <address class="footer__contacts">
+          <h3 class="footer__contacts-title">Contattaci</h3>
+          <ul class="footer__contacts-list" aria-label="Contatti">
+            <li>
+              <a href="#" class="footer__contacts-link" aria-label="Email">
+                <svg class="footer__icon">
+                  <use href="#"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__contacts-link" aria-label="Phone">
+                <svg class="footer__icon">
+                  <use href="#"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__contacts-link" aria-label="Whatsapp">
+                <svg class="footer__icon">
+                  <use href="#"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <h3 class="footer__social-title">Seguici sui social</h3>
+          <ul class="footer__social-list" aria-label="Social media">
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <svg class="footer__icon">
+                  <use href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <svg class="footer__icon">
+                  <use href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Youtube">
+                <svg class="footer__icon">
+                  <use href="#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="footer__section footer__section--copyright">
+        <p class="footer__copyright">Design by Daniele Brusca</p>
+        <p class="footer__legal">SURF & TRAVEL AGENCY S.L. ~ NIF. V232423</p>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
