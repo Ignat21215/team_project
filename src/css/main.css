@@ -150,6 +150,17 @@ img {
   height: auto;
 }
 
+button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 24px;
+  background-color: #ff8f50;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
 .container {
   width: 1440px;
   padding: 0 15px;
@@ -220,17 +231,6 @@ img {
   width: 16px;
   height: 16px;
   fill: currentColor;
-}
-
-.header__button {
-  padding: 12px 28px;
-  border: none;
-  border-radius: 24px;
-  background-color: #ff8a3d;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .header__button:hover {
@@ -314,16 +314,6 @@ img {
 
 .footer__button {
   margin-top: 8px;
-  padding: 12px 22px;
-  border: none;
-  border-radius: 24px;
-  background-color: #ff9f4a;
-  color: #222;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 .footer__button:hover {
   background-color: #e67626;
