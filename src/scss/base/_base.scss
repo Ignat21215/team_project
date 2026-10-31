@@ -1,18 +1,47 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
+
+body {
+  font-family: $second-family;
+}
 
 .button {
   padding: 12px 28px;
   border: none;
   border-radius: 24px;
-  background-color: #ff8f50;
+  background-color: $accent;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
+.in-card-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 40px;
+  background-color: $accent;
+  font-size: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-description {
+  color: $grigorij-testo;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
 .container {
   width: 1440px;
-  //ПАДИНГ КОНТЕЙНЕРУ НЕ СТАВЯТ
   margin: 0 auto;
 }
