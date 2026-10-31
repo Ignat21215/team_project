@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 
 .header {
   position: relative;
@@ -10,6 +10,19 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.search__header,
+.desc__header {
+  min-height: 0;
+}
+
+.search__header {
+  background-image: url("../images/search-header.jpg");
+}
+
+.desc__header {
+  background-image: url("../images/desc-header.jpg");
 }
 
 .header::before {
@@ -35,6 +48,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 .header__logo {
@@ -72,7 +87,7 @@
 }
 
 .header__button:hover {
-  background-color: #e67626;
+  background-color: $accent;
 }
 
 .header__hero {
@@ -81,12 +96,14 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 120px;
 }
 
 .header__title {
   margin: 0;
   font-size: 36px;
+  font-family: "Kavoon", sans-serif;
+  font-weight: 400;
   line-height: 1.2;
   color: #fff;
+  width: 730px;
 }
