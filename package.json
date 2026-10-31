@@ -19,11 +19,10 @@
   },
   "dependencies": {
     "concurrently": "^10.0.6",
-    "dotenv": "^18.0.8",
     "handlebars": "^4.7.10",
     "json-server": "^1.0.0-beta.15"
   },
-    "proxy": {
+  "proxy": {
     "/api": {
       "target": "http://localhost:3000",
       "rewrite": {

@@ -13,10 +13,12 @@
   &__wrapper {
     display: flex;
     gap: 16px;
+    align-items: baseline;
   }
   &__list {
     display: flex;
     column-gap: 11px;
+    justify-content: center;
     row-gap: 15px;
     flex-wrap: wrap;
   }
@@ -26,6 +28,9 @@
     border-color: $gray;
     border-style: solid;
     overflow: hidden;
+    &-img{
+      width: 300px;
+    }
     &-wrapper {
       box-shadow: 0 10px 25px -5px $gray;
       padding-top: 19px;
@@ -52,6 +57,7 @@
     }
   }
   &__selection {
+    width: 100%;
     border-radius: 16px;
     border-width: 2px;
     border-color: $black;
@@ -59,7 +65,11 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
+    &-btn{
+      pointer-events: none;
+    }
     &-item {
+      position: relative;
       border-radius: 2px;
       padding: 11px;
       display: flex;
@@ -72,19 +82,34 @@
       }
     }
     &-list {
+      position: absolute;
+      top: 38px;
       display: none;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
       &__item {
         font-style: regular;
-        font-size: 16px;
+        font-size: 12px;
         border-radius: 24px;
         border-width: 1;
         border-color: $black;
         border-style: solid;
+        padding: 8px;
+        text-align: center;
+        &:hover,
+        &:focus {
+          background-color: $accent;
+        }
       }
     }
   }
 }
 
-// .clicked-selection {
-//     background-color: $accent;
-// }
+.clicked-item {
+  background-color: $accent;
+}
+
+.clicked-option {
+  background-color: $accent;
+}
