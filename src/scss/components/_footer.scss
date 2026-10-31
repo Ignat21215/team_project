@@ -1,7 +1,4 @@
-@use '../utils/variables' as *;
-
-$footer-bg: #1f1a14;
-$footer-bottom-bg: #2e2a24;
+@use "../utils/variables" as *;
 
 .footer {
   color: #fff;
@@ -41,7 +38,7 @@ $footer-bottom-bg: #2e2a24;
 
 .footer__form-title {
   margin: 0 0 12px;
-  font-family: "Cherry Swash", serif;
+  font-family: $font-family, sans-serif;
   font-size: 48px;
   line-height: 1.2;
   white-space: nowrap;
@@ -59,7 +56,8 @@ $footer-bottom-bg: #2e2a24;
   border-radius: 0;
   background-color: #fff;
   color: #333;
-  font-family: inherit;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 15px;
 
   &::placeholder {
@@ -79,7 +77,7 @@ $footer-bottom-bg: #2e2a24;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 75px 0 123px 150px;
-  background-color: $footer-bg;
+  background-color: $black;
 }
 
 .footer__brand,
@@ -94,7 +92,7 @@ $footer-bottom-bg: #2e2a24;
 
 .footer__brand-name {
   margin: 0 0 4px;
-  font-family: "Cherry Swash", serif;
+  font-family: $font-family, sans-serif;
   font-size: 35px;
 }
 
@@ -120,7 +118,7 @@ $footer-bottom-bg: #2e2a24;
 .footer__nav-title,
 .footer__contacts-title {
   margin: 33px 0;
-  font-family: "Cherry Swash", serif;
+  font-family: $font-family, sans-serif;
   font-size: 21px;
 }
 
@@ -167,7 +165,8 @@ $footer-bottom-bg: #2e2a24;
 .footer__social-title {
   margin: 0 0 8px;
   font-size: 15px;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 
 .footer__contacts-link,
@@ -191,7 +190,7 @@ $footer-bottom-bg: #2e2a24;
   align-items: center;
   justify-content: space-between;
   padding: 20px 150px;
-  background-color: $footer-bottom-bg;
+  background-color: $gray;
   font-size: 15px;
 }
 
