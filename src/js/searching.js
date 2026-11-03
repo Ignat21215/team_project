@@ -46,13 +46,13 @@ export async function searchingSelectionListClick(e) {
             let arr = target.dataset.arr;
             let toPush;
             if (target.getAttribute('id') === null) {
-                if (target.getAttribute('data-crowd')) {
+                if (target.hasAttribute('data-crowd')) {
                     toPush = target.dataset.crowd;
                 }
-                if (target.getAttribute('data-price')) {
+                if (target.hasAttribute('data-price')) {
                     toPush = target.dataset.price;
                 }
-                if (target.getAttribute('data-month')) {
+                if (target.hasAttribute('data-month')) {
                     toPush = target.dataset.month;
                 }
             } else {
@@ -64,16 +64,19 @@ export async function searchingSelectionListClick(e) {
             let arr = target.dataset.arr;
             let toRemove;
             if (target.getAttribute('id') === null) {
-                if (target.getAttribute('data-crowd')) {
+                if (target.hasAttribute('data-crowd')) {
                     toRemove = target.dataset.crowd;
                 }
-                if (target.getAttribute('data-price')) {
+                if (target.hasAttribute('data-price')) {
                     toRemove = target.dataset.price;
+                }
+                if (target.hasAttribute('data-month')) {
+                    toRemove = target.dataset.month;
                 }
             } else {
                 toRemove = target.id;
-                newData[arr].splice(arr.indexOf(toRemove), 1);
             }
+            newData[arr].splice(arr.indexOf(toRemove), 1);
         }
         renderCards(await fetching(API + 'destinations'))
     }
@@ -86,34 +89,52 @@ export function initCards(arr) {
     });
 }
 
-export function renderCards(arr) {
+export async function renderCards(arr) {
     searchingList.innerHTML = '';
-    let newArr = [];
-    arr.forEach(x => {
-        let checkArr = [];
-        Object.keys(newData).forEach(newDataKey => {
-            if (!newData[newDataKey] || newData[newDataKey].length === 0) {
-            } else if (Array.isArray(x[newDataKey]) && x[newDataKey].length !== 0) {
-                if (newData[newDataKey].some(e => x[newDataKey].includes(e) || x[newDataKey].some(item => item == e))) {
-                    checkArr.push(true);
-                } else {
-                    checkArr.push(false);
+    if (Object.keys(newData).some(key => newData[key].length > 0)) {
+        let newArr = [];
+        arr.forEach(x => {
+            let checkArr = [];
+            Object.keys(newData).forEach(key => {
+                if (newData[key].length > 0) {
+                    if (Array.isArray(x[key])) {
+                        let includes = false;
+                        newData[key].forEach(e => {
+                            x[key].forEach(b => {
+                                if (e == b) {
+                                    includes = true;
+                                }
+                            })
+                        })
+                        if (includes) {
+                            checkArr.push(true);
+                        } else {
+                            checkArr.push(false)
+                        }
+                    } else {
+                        let includes = false;
+                        newData[key].forEach(e => {
+                            if (e == x[key]) {
+                                includes = true;
+                            }
+                        })
+                        if (includes) {
+                            checkArr.push(true);
+                        } else {
+                            checkArr.push(false)
+                        }
+                    }
                 }
-            } else {
-                if (newData[newDataKey].some(e => x[newDataKey] == e)) {
-                    checkArr.push(true);
-                }
-                else {
-                    checkArr.push(false);
-                }
+            })
+            if (checkArr.length > 0 && checkArr.every(e => e === true)) {
+                newArr.push(x);
             }
         });
-        if (checkArr.every(e => e === true)) {
-            newArr.push(x);
-        }
-    });
-    newArr.forEach(x => {
-        let html = cardTemplate(x);
-        searchingList.insertAdjacentHTML('beforeend', html);
-    });
+        newArr.forEach(x => {
+            let html = cardTemplate(x);
+            searchingList.insertAdjacentHTML('beforeend', html);
+        });
+    } else {
+        initCards(await fetching(API + 'destinations'))
+    }
 }
