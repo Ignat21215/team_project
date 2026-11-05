@@ -1,216 +1,352 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/team_project/team_project.8cb89b81.css><body>
-  <header class="header search__header">
-    <div class="container header__container">
-      <nav class=header__nav>
-        <a href=# class=header__logo>
-          <img src=/team_project/logo.63be7cd5.png alt=Logo>
-        </a>
-        <ul class=header__list>
-          <li class=header__item>
-            <a href=/team_project/index.html class=header__link>
-              <svg class=header__icon><use href=# /></svg>
-              Tipi di Vacanze
-            </a>
-          </li>
-          <li class=header__item>
-            <a href=/team_project/search.html class=header__link>
-              <svg class=header__icon><use href=# /></svg>
-              Destinazioni
-            </a>
-          </li>
-          <li class=header__item>
-            <a href=/team_project/desc.html class=header__link>
-              <svg class=header__icon><use href=# /></svg>
-              Sistemazioni
-            </a>
-          </li>
-          <li class=header__item>
-            <a href=# class=header__link>About</a>
-          </li>
-        </ul>
-        <button type=button class="button header__button">Prenota</button>
-      </nav>
-
-      <div class=header__hero>
-        <h1 class=header__title>
-          Prenota suvito la tua prossima vacanza SurfCamp tra i pacchetti
-          disponibili
-        </h1>
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class=searching>
-      <div class=container>
-        <h2 class="searching__title section-title">Яка наступная точка призначення?</h2>
-        <p class="searching__subtitle section-description">У який куточок світу ти хочеш вирушити? Шукай серед понад 200 доступних
-          напрямків.
-        </p>
-        <div class=searching__wrapper>
-          <ul class=searching__selection>
-            <li class=searching__selection-item>Країна<button type=button class=searching__selection-btn>&gt;</button>
-              <ul class=searching__selection-list>
-                <li class=searching__selection-list__item data-arr=countryId id=portugal>Португалія</li>
-                <li class=searching__selection-list__item data-arr=countryId id=marocco>Марокко</li>
-                <li class=searching__selection-list__item data-arr=countryId id=france>Франція</li>
-                <li class=searching__selection-list__item data-arr=countryId id=indonesia>Індонезія</li>
-                <li class=searching__selection-list__item data-arr=countryId id=sri-lanka>Шрі-Ланка</li>
-                <li class=searching__selection-list__item data-arr=countryId id=philippines>Філіппіни</li>
-                <li class=searching__selection-list__item data-arr=countryId id=costa-rica>Коста-Рика</li>
-                <li class=searching__selection-list__item data-arr=countryId id=mexico>Мексика</li>
-                <li class=searching__selection-list__item data-arr=countryId id=usa>США</li>
-                <li class=searching__selection-list__item data-arr=countryId id=australia>Австралія</li>
-                <li class=searching__selection-list__item data-arr=countryId id=south-africa>ПАР</li>
-              </ul>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/team_project/team_project.b0083fd1.css><body>
+    <header class="header search__header">
+      <div class="container header__container">
+        <nav class=header__nav>
+          <a href=# class=header__logo>
+            <img src=/team_project/logo.63be7cd5.png alt=Logo>
+          </a>
+          <ul class=header__list>
+            <li class=header__item>
+              <a href=/team_project/index.html class=header__link>
+                <svg class=header__icon><use href=# /></svg>
+                Tipi di Vacanze
+              </a>
             </li>
-            <li class=searching__selection-item>Тип волни<button type=button class=searching__selection-btn>&gt;</button>
-              <ul class=searching__selection-list>
-                <li class=searching__selection-list__item data-arr=waveType id=beach-break>Beach-break</li>
-                <li class=searching__selection-list__item data-arr=waveType id=reef-break>Reef-break</li>
-                <li class=searching__selection-list__item data-arr=waveType id=point-break>Point-break</li>
-              </ul>
+            <li class=header__item>
+              <a href=/team_project/search.html class=header__link>
+                <svg class=header__icon><use href=# /></svg>
+                Destinazioni
+              </a>
             </li>
-            <li class=searching__selection-item>Рівень ціни<button type=button class=searching__selection-btn>&gt;</button>
-              <ul class=searching__selection-list>
-                <li class=searching__selection-list__item data-arr=priceLevel data-price=1>Низька ціна</li>
-                <li class=searching__selection-list__item data-arr=priceLevel data-price=2>Середня ціна</li>
-                <li class=searching__selection-list__item data-arr=priceLevel data-price=3>Висока ціна</li>
-              </ul>
+            <li class=header__item>
+              <a href=/team_project/desc.html class=header__link>
+                <svg class=header__icon><use href=# /></svg>
+                Sistemazioni
+              </a>
             </li>
-            <li class=searching__selection-item>Категорія серфінгу<button type=button class=searching__selection-btn>&gt;</button>
-              <ul class=searching__selection-list>
-                <li class=searching__selection-list__item data-arr=categoryId id=surf-camp>Серф-кемпи</li>
-                <li class=searching__selection-list__item data-arr=categoryId id=iconic-spot>Легендарні споти</li>
-                <li class=searching__selection-list__item data-arr=categoryId id=surf-school>Для навчання</li>
-                <li class=searching__selection-list__item data-arr=categoryId id=big-wave>Big wave</li>
-                <li class=searching__selection-list__item data-arr=categoryId id=surf-yoga>Surf &amp; Yoga</li>
-              </ul>
-            </li>
-            <li class=searching__selection-item>Рівень напливу туристів<button type=button class=searching__selection-btn>&gt;</button>
-              <ul class=searching__selection-list>
-                <li class=searching__selection-list__item data-arr=crowdLevel data-crowd=1>Низький наплив</li>
-                <li class=searching__selection-list__item data-arr=crowdLevel data-crowd=2>Середній наплив</li>
-                <li class=searching__selection-list__item data-arr=crowdLevel data-crowd=3>Високий наплив</li>
-              </ul>
-            </li>
-            <li class=searching__selection-item>У якому місяці плануєте подорож?<button type=button class=searching__selection-btn>&gt;</button>
-              <ul class=searching__selection-list>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=1>Січень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=2>Лютий</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=3>Березень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=4>Квітень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=5>Травень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=6>Червень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=7>Липень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=8>Серпень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=9>Вересень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=10>Жовтень</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=11>Листопад</li>
-                <li class=searching__selection-list__item data-arr=bestMonths data-month=12>Грудень</li>
-              </ul>
+            <li class=header__item>
+              <a href=# class=header__link>About</a>
             </li>
           </ul>
-          <ul class=searching__list></ul>
+          <button type=button class="button header__button" data-open_modal>
+            Prenota
+          </button>
+        </nav>
+
+        <div class=header__hero>
+          <h1 class=header__title>
+            Prenota suvito la tua prossima vacanza SurfCamp tra i pacchetti
+            disponibili
+          </h1>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class=footer>
-    <div class=container></div>
-    <div class="footer__section footer__section--newsletter">
-      <form class=footer__form>
-        <h2 class=footer__form-title>
-          Iscriviti alla
-          <span class=footer__form-title--highlight>Newsletter</span>
-        </h2>
-        <input name=name class=footer__input placeholder="Nome e Cognome">
-        <input type=email name=email class=footer__input placeholder="Indirizzo e-mail">
-        <button type=button class="button footer__button">
-          Voglio iscrivermi!
-        </button>
-      </form>
-    </div>
-
-    <div class="footer__section footer__section--info">
-      <div class=footer__brand>
-        <h2 class=footer__brand-name>Surf &amp; Travel</h2>
-        <h3 class=footer__brand-slogan>Surf &amp; Travel Agency</h3>
-        <p class=footer__brand-description>
-          Tutte le destinazioni selezionate per la tua prossima vacanza Surf e
-          non solo.
-        </p>
+    </header>
+    <main>
+      <section class=searching>
+        <div class=container>
+          <h2 class="searching__title section-title">
+            Яка наступная точка призначення?
+          </h2>
+          <p class="searching__subtitle section-description">
+            У який куточок світу ти хочеш вирушити? Шукай серед понад 200
+            доступних напрямків.
+          </p>
+          <div class=searching__wrapper>
+            <ul class=searching__selection>
+              <li class=searching__selection-item>
+                Країна<button type=button class=searching__selection-btn>
+                  &gt;
+                </button>
+                <ul class=searching__selection-list>
+                  <li class=searching__selection-list__item data-arr=countryId id=portugal>
+                    Португалія
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=marocco>
+                    Марокко
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=france>
+                    Франція
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=indonesia>
+                    Індонезія
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=sri-lanka>
+                    Шрі-Ланка
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=philippines>
+                    Філіппіни
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=costa-rica>
+                    Коста-Рика
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=mexico>
+                    Мексика
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=usa>
+                    США
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=australia>
+                    Австралія
+                  </li>
+                  <li class=searching__selection-list__item data-arr=countryId id=south-africa>
+                    ПАР
+                  </li>
+                </ul>
+              </li>
+              <li class=searching__selection-item>
+                Тип волни<button type=button class=searching__selection-btn>
+                  &gt;
+                </button>
+                <ul class=searching__selection-list>
+                  <li class=searching__selection-list__item data-arr=waveType id=beach-break>
+                    Beach-break
+                  </li>
+                  <li class=searching__selection-list__item data-arr=waveType id=reef-break>
+                    Reef-break
+                  </li>
+                  <li class=searching__selection-list__item data-arr=waveType id=point-break>
+                    Point-break
+                  </li>
+                </ul>
+              </li>
+              <li class=searching__selection-item>
+                Рівень ціни<button type=button class=searching__selection-btn>
+                  &gt;
+                </button>
+                <ul class=searching__selection-list>
+                  <li class=searching__selection-list__item data-arr=priceLevel data-price=1>
+                    Низька ціна
+                  </li>
+                  <li class=searching__selection-list__item data-arr=priceLevel data-price=2>
+                    Середня ціна
+                  </li>
+                  <li class=searching__selection-list__item data-arr=priceLevel data-price=3>
+                    Висока ціна
+                  </li>
+                </ul>
+              </li>
+              <li class=searching__selection-item>
+                Категорія серфінгу<button type=button class=searching__selection-btn>
+                  &gt;
+                </button>
+                <ul class=searching__selection-list>
+                  <li class=searching__selection-list__item data-arr=categoryId id=surf-camp>
+                    Серф-кемпи
+                  </li>
+                  <li class=searching__selection-list__item data-arr=categoryId id=iconic-spot>
+                    Легендарні споти
+                  </li>
+                  <li class=searching__selection-list__item data-arr=categoryId id=surf-school>
+                    Для навчання
+                  </li>
+                  <li class=searching__selection-list__item data-arr=categoryId id=big-wave>
+                    Big wave
+                  </li>
+                  <li class=searching__selection-list__item data-arr=categoryId id=surf-yoga>
+                    Surf &amp; Yoga
+                  </li>
+                </ul>
+              </li>
+              <li class=searching__selection-item>
+                Рівень напливу туристів<button type=button class=searching__selection-btn>
+                  &gt;
+                </button>
+                <ul class=searching__selection-list>
+                  <li class=searching__selection-list__item data-arr=crowdLevel data-crowd=1>
+                    Низький наплив
+                  </li>
+                  <li class=searching__selection-list__item data-arr=crowdLevel data-crowd=2>
+                    Середній наплив
+                  </li>
+                  <li class=searching__selection-list__item data-arr=crowdLevel data-crowd=3>
+                    Високий наплив
+                  </li>
+                </ul>
+              </li>
+              <li class=searching__selection-item>
+                У якому місяці плануєте подорож?<button type=button class=searching__selection-btn>
+                  &gt;
+                </button>
+                <ul class=searching__selection-list>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=1>
+                    Січень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=2>
+                    Лютий
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=3>
+                    Березень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=4>
+                    Квітень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=5>
+                    Травень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=6>
+                    Червень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=7>
+                    Липень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=8>
+                    Серпень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=9>
+                    Вересень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=10>
+                    Жовтень
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=11>
+                    Листопад
+                  </li>
+                  <li class=searching__selection-list__item data-arr=bestMonths data-month=12>
+                    Грудень
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class=searching__list></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class=footer>
+      <div class=container></div>
+      <div class="footer__section footer__section--newsletter">
+        <form class=footer__form>
+          <h2 class=footer__form-title>
+            Iscriviti alla
+            <span class=footer__form-title--highlight>Newsletter</span>
+          </h2>
+          <input name=name class=footer__input placeholder="Nome e Cognome">
+          <input type=email name=email class=footer__input placeholder="Indirizzo e-mail">
+          <button type=button class="button footer__button">
+            Voglio iscrivermi!
+          </button>
+        </form>
       </div>
-      <nav class=footer__nav aria-label="Menu principale">
-        <h3 class=footer__nav-title>Menu</h3>
-        <ul class=footer__nav-list>
-          <li>
-            <a href=# class=footer__nav-link>
-              <svg class=footer__nav-icon><use href=# /></svg>
-              Vacanze Surf</a>
-          </li>
-          <li>
-            <a href=# class=footer__nav-link>
-              <svg class=footer__nav-icon><use href=# /></svg>
-              Destinazioni</a>
-          </li>
-          <li>
-            <a href=# class=footer__nav-link>
-              <svg class=footer__nav-icon><use href=# /></svg>
-              Destinazioni</a>
-          </li>
-          <li>
-            <a href=# class=footer__nav-link>
-              <svg class=footer__nav-icon><use href=# /></svg>
-              About</a>
-          </li>
-        </ul>
-      </nav>
-      <address class=footer__contacts>
-        <h3 class=footer__contacts-title>Contattaci</h3>
-        <ul class=footer__contacts-list aria-label=Contatti>
-          <li>
-            <a href=# class=footer__contacts-link aria-label=Email>
-              <svg class=footer__icon><use href=# /></svg>
-            </a>
-          </li>
-          <li>
-            <a href=# class=footer__contacts-link aria-label=Phone>
-              <svg class=footer__icon><use href=# /></svg>
-            </a>
-          </li>
-          <li>
-            <a href=# class=footer__contacts-link aria-label=Whatsapp>
-              <svg class=footer__icon><use href=# /></svg>
-            </a>
-          </li>
-        </ul>
 
-        <h3 class=footer__social-title>Seguici sui social</h3>
-        <ul class=footer__social-list aria-label="Social media">
-          <li>
-            <a href=# class=footer__social-link aria-label=Facebook>
-              <svg class=footer__icon><use href=#icon-facebook /></svg>
-            </a>
-          </li>
-          <li>
-            <a href=# class=footer__social-link aria-label=Instagram>
-              <svg class=footer__icon><use href=#icon-instagram /></svg>
-            </a>
-          </li>
-          <li>
-            <a href=# class=footer__social-link aria-label=Youtube>
-              <svg class=footer__icon><use href=#icon-youtube /></svg>
-            </a>
-          </li>
-        </ul>
-      </address>
+      <div class="footer__section footer__section--info">
+        <div class=footer__brand>
+          <h2 class=footer__brand-name>Surf &amp; Travel</h2>
+          <h3 class=footer__brand-slogan>Surf &amp; Travel Agency</h3>
+          <p class=footer__brand-description>
+            Tutte le destinazioni selezionate per la tua prossima vacanza Surf e
+            non solo.
+          </p>
+        </div>
+        <nav class=footer__nav aria-label="Menu principale">
+          <h3 class=footer__nav-title>Menu</h3>
+          <ul class=footer__nav-list>
+            <li>
+              <a href=# class=footer__nav-link>
+                <svg class=footer__nav-icon><use href=# /></svg>
+                Vacanze Surf</a>
+            </li>
+            <li>
+              <a href=# class=footer__nav-link>
+                <svg class=footer__nav-icon><use href=# /></svg>
+                Destinazioni</a>
+            </li>
+            <li>
+              <a href=# class=footer__nav-link>
+                <svg class=footer__nav-icon><use href=# /></svg>
+                Destinazioni</a>
+            </li>
+            <li>
+              <a href=# class=footer__nav-link>
+                <svg class=footer__nav-icon><use href=# /></svg>
+                About</a>
+            </li>
+          </ul>
+        </nav>
+        <address class=footer__contacts>
+          <h3 class=footer__contacts-title>Contattaci</h3>
+          <ul class=footer__contacts-list aria-label=Contatti>
+            <li>
+              <a href=# class=footer__contacts-link aria-label=Email>
+                <svg class=footer__icon><use href=# /></svg>
+              </a>
+            </li>
+            <li>
+              <a href=# class=footer__contacts-link aria-label=Phone>
+                <svg class=footer__icon><use href=# /></svg>
+              </a>
+            </li>
+            <li>
+              <a href=# class=footer__contacts-link aria-label=Whatsapp>
+                <svg class=footer__icon><use href=# /></svg>
+              </a>
+            </li>
+          </ul>
+
+          <h3 class=footer__social-title>Seguici sui social</h3>
+          <ul class=footer__social-list aria-label="Social media">
+            <li>
+              <a href=# class=footer__social-link aria-label=Facebook>
+                <svg class=footer__icon><use href=#icon-facebook /></svg>
+              </a>
+            </li>
+            <li>
+              <a href=# class=footer__social-link aria-label=Instagram>
+                <svg class=footer__icon><use href=#icon-instagram /></svg>
+              </a>
+            </li>
+            <li>
+              <a href=# class=footer__social-link aria-label=Youtube>
+                <svg class=footer__icon><use href=#icon-youtube /></svg>
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="footer__section footer__section--copyright">
+        <p class=footer__copyright>Design by Daniele Brusca</p>
+        <p class=footer__legal>SURF &amp; TRAVEL AGENCY S.L. ~ NIF. V232423</p>
+      </div>
+    </footer>
+    <div class="backdrop is__hidden" data-modal>
+      <div class=modal>
+        <button class=close__button data-close_modal>✕</button>
+        <h2 class=form__name>Залиште свої дані, ми вам передзвонимо</h2>
+        <form class=form>
+          <div class=form__part>
+            <label class=form__text>Ім'я</label>
+            <div class=form__box>
+              <input class=form__input name=firstname>
+            </div>
+          </div>
+          <div class=form__part>
+            <label class=form__text>Телефон</label>
+            <div class=form__box>
+              <input class=form__input type=tel name=number>
+            </div>
+          </div>
+          <div class=form__part>
+            <label class=form__text>Пошта</label>
+            <div class=form__box>
+              <input class=form__input type=email name=email>
+            </div>
+          </div>
+          <div class=form__part--comment>
+            <label class=form__text>Куди ви хочете вирушити?</label>
+            <textarea class=form__comment name id placeholder="Введіть текст"></textarea>
+          </div>
+          <div class=checkbox>
+            <input class=checkbox type=checkbox name>
+            <p class=checkbox__text>
+              Погоджуюся з розсилкою та приймаю
+              <a href=# class=checkbox__text2>Умови договору</a>
+            </p>
+          </div>
+          <button class=form__button type=button>Відправити</button>
+        </form>
+      </div>
     </div>
-
-    <div class="footer__section footer__section--copyright">
-      <p class=footer__copyright>Design by Daniele Brusca</p>
-      <p class=footer__legal>SURF &amp; TRAVEL AGENCY S.L. ~ NIF. V232423</p>
-    </div>
-  </footer>
-  <script src=/team_project/team_project.bf4b8e4f.js type=module></script>
-
+    <script src=/team_project/team_project.bf4b8e4f.js type=module></script>
+    <script src=/team_project/team_project.3d437fa9.js type=module></script>
+  
 

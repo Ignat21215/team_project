@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/team_project/team_project.8cb89b81.css><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/team_project/team_project.b0083fd1.css><body>
     <header class=header>
       <div class="container header__container">
         <nav class=header__nav>
@@ -28,7 +28,9 @@
               <a href=# class=header__link>About</a>
             </li>
           </ul>
-          <button type=button class="button header__button">Prenota</button>
+          <button type=button class="button header__button" data-open_modal>
+            Prenota
+          </button>
         </nav>
 
         <div class=header__hero>
@@ -133,6 +135,45 @@
         <p class=footer__legal>SURF &amp; TRAVEL AGENCY S.L. ~ NIF. V232423</p>
       </div>
     </footer>
+    <div class="backdrop is__hidden" data-modal>
+      <div class=modal>
+        <button class=close__button data-close_modal>✕</button>
+        <h2 class=form__name>Залиште свої дані, ми вам передзвонимо</h2>
+        <form class=form>
+          <div class=form__part>
+            <label class=form__text>Ім'я</label>
+            <div class=form__box>
+              <input class=form__input name=firstname>
+            </div>
+          </div>
+          <div class=form__part>
+            <label class=form__text>Телефон</label>
+            <div class=form__box>
+              <input class=form__input type=tel name=number>
+            </div>
+          </div>
+          <div class=form__part>
+            <label class=form__text>Пошта</label>
+            <div class=form__box>
+              <input class=form__input type=email name=email>
+            </div>
+          </div>
+          <div class=form__part--comment>
+            <label class=form__text>Куди ви хочете вирушити?</label>
+            <textarea class=form__comment name id placeholder="Введіть текст"></textarea>
+          </div>
+          <div class=checkbox>
+            <input class=checkbox type=checkbox name>
+            <p class=checkbox__text>
+              Погоджуюся з розсилкою та приймаю
+              <a href=# class=checkbox__text2>Умови договору</a>
+            </p>
+          </div>
+          <button class=form__button type=button>Відправити</button>
+        </form>
+      </div>
+    </div>
     <script src=/team_project/team_project.bf4b8e4f.js type=module></script>
+    <script src=/team_project/team_project.3d437fa9.js type=module></script>
   
 
