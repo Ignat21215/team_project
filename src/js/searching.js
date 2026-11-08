@@ -1,8 +1,9 @@
 import Handlebars from "handlebars";
 import cardTemplate from "../templates/search-card.hbs"
-import { API } from './index.js'
+import pageTemplate from "../templates/desc-page.hbs"
+import { API, fetching } from './index.js'
 
-let searchingList = document.querySelector('.searching__list');
+export let searchingList = document.querySelector('.searching__list');
 
 let newData = {
     countryId: [],
@@ -12,16 +13,6 @@ let newData = {
     bestMonths: [],
     categoryId: []
 };
-
-export async function fetching(api) {
-    try {
-        let response = await fetch(api);
-        let data = await response.json();
-        return data
-    } catch (error) {
-        console.error(error);
-    }
-}
 
 export function searchingSelectionClick(e) {
     let target = e.target;
@@ -78,7 +69,7 @@ export async function searchingSelectionListClick(e) {
             }
             newData[arr].splice(arr.indexOf(toRemove), 1);
         }
-        renderCards(await fetching(API + 'destinations'))
+        renderCards(await fetching(API))
     }
 }
 
@@ -87,6 +78,13 @@ export function initCards(arr) {
         let html = cardTemplate(x);
         searchingList.insertAdjacentHTML('beforeend', html)
     });
+}
+
+export function redirect(event) {
+    let target = event.target;
+    let itemId = target.dataset.redirect;
+    console.log(itemId)
+    localStorage.setItem('itemId', itemId);
 }
 
 export async function renderCards(arr) {

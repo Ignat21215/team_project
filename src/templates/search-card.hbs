@@ -1,8 +1,10 @@
-<li class="searching__item">
-  <p class="searching__item-activity">{{categoryId}}</p>
-  <img src="{{image}}" alt="image" class="searching__item-img" />
-  <div class="searching__item-wrapper">
-    <p class="searching__item-subtitle">{{countryId}}</p>
-    <h3 class="searching__item-title">{{name}}</h3>
-  </div>
+<li class="searching__item" id="{{id}}">
+  <a href="../desc.html" class="searching__item-link" data-redirect="{{id}}">
+    <p class="searching__item-activity">{{categoryId}}</p>
+    <img src="{{image}}" alt="image" class="searching__item-img" />
+    <div class="searching__item-wrapper">
+      <p class="searching__item-subtitle">{{countryId}}</p>
+      <h3 class="searching__item-title">{{name}}</h3>
+    </div>
+  </a>
 </li>
