@@ -80,13 +80,6 @@ export function initCards(arr) {
     });
 }
 
-export function redirect(event) {
-    let target = event.target;
-    let itemId = target.dataset.redirect;
-    console.log(itemId)
-    localStorage.setItem('itemId', itemId);
-}
-
 export async function renderCards(arr) {
     searchingList.innerHTML = '';
     if (Object.keys(newData).some(key => newData[key].length > 0)) {

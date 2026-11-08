@@ -461,14 +461,10 @@ body {
 }
 
 .hero {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          display: -webkit-box;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          -webkit-box-pack: center;
+  -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
@@ -717,6 +713,10 @@ body {
   margin: 0;
 }
 
+.hero__subtitle {
+  color: rgb(27, 22, 14);
+}
+
 .searching {
   padding-top: 64px;
   padding-bottom: 105px;
@@ -728,16 +728,27 @@ body {
   padding-bottom: 64px;
 }
 .searching__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .searching__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  column-gap: 11px;
-  justify-content: center;
+  -webkit-column-gap: 11px;
+     -moz-column-gap: 11px;
+          column-gap: 11px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   row-gap: 15px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .searching__item {
   border-radius: 24px;
@@ -750,7 +761,8 @@ body {
   width: 300px;
 }
 .searching__item-wrapper {
-  box-shadow: 0 10px 25px -5px rgb(48, 45, 39);
+  -webkit-box-shadow: 0 10px 25px -5px rgb(48, 45, 39);
+          box-shadow: 0 10px 25px -5px rgb(48, 45, 39);
   padding-top: 19px;
   padding-bottom: 11px;
   padding-left: 21px;
@@ -779,9 +791,14 @@ body {
   border-width: 2px;
   border-color: rgb(27, 22, 14);
   border-style: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .searching__selection-btn {
   pointer-events: none;
@@ -790,9 +807,13 @@ body {
   position: relative;
   border-radius: 2px;
   padding: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 13px;
 }
 .searching__selection-item:hover, .searching__selection-item:focus {
@@ -802,7 +823,10 @@ body {
   position: absolute;
   top: 38px;
   display: none;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 20px;
   padding: 20px;
 }
@@ -826,8 +850,4 @@ body {
 
 .clicked-option {
   background-color: #ff9f4a;
-}
-
-.hero__subtitle {
-  color: rgb(27, 22, 14);
 }

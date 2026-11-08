@@ -1,7 +1,7 @@
-import { searchingSelectionClick, searchingSelectionListClick, initCards, searchingList, redirect } from './searching.js'
+import { searchingSelectionClick, searchingSelectionListClick, initCards, searchingList } from './searching.js'
 import { renderDesc } from './desc.js'
 
-export let API = 'https://vjcucvgfkfqsfhiz.private.blob.vercel-storage.com/db.json?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfVkpDdUNWZ0ZLZnFzRkhpWiIsIm93bmVySWQiOiJ0ZWFtX3lWS3dnVEFoWWpiOUhRdDlJa1hLd0N3QyIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzk0MTIyNjEzODEzLCJpYXQiOjE3OTQwNzk0MTM4OTN9.uQaf3sQovlqxSHbG1Jjd1hNtPt9ueOhHpzwHc9mr9rc&vercel-blob-signature=EULCiwNCq1iMA8NTMIF80cvNNShcdB1OhkvawR_QyRk';
+export let API = 'https://vjcucvgfkfqsfhiz.private.blob.vercel-storage.com/db.json?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfVkpDdUNWZ0ZLZnFzRkhpWiIsIm93bmVySWQiOiJ0ZWFtX3lWS3dnVEFoWWpiOUhRdDlJa1hLd0N3QyIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzk0MjAxNTEwODg3LCJpYXQiOjE3OTQxNTgzMTE3NDN9.ys-BKtvcG0UJLsu0BNIPNmKiqGktgT6ir5PMePbaUtw&vercel-blob-signature=XWDHwk9NFvePyKtfpdC_Pom3a6eQNi5nbvUXOwCB9Tw';
 
 let searchingSelection = document.querySelector('.searching__selection');
 
@@ -28,7 +28,7 @@ async function init() {
 
         searchingList.addEventListener('click', (event) => {
             if (event.target.classList.contains('searching__item-link')) {
-                redirect(event)
+                localStorage.setItem('itemId', event.target.dataset.redirect);
             }
         })
     }
