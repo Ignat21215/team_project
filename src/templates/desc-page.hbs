@@ -1,0 +1,54 @@
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">{{name}}</h1>
+    <h2 class="hero__text-subtitle">{{shortDescription}}</h2>
+    <div class="hero__wrapper">
+      <p class="hero__desc">{{description}}</p>
+      <div class="hero__features">
+        <h3 class="hero__features-title">Переваги цього місця:</h3>
+        <ul class="hero__features-list">
+          {{#each features}}
+            <li class="hero__features-list__item">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="map">
+  <div class="container">
+    {{#each coordinates}}
+      <iframe
+        src="https://maps.google.com/maps?q={{lat}},{{lng}}&z=14&output=embed"
+        frameborder="0"
+      ></iframe>
+    {{/each}}
+  </div>
+</section>
+<section class="gallery">
+  <div class="container">
+    <ul class="gallery__list">
+      {{#each gallery}}
+        <li class="gallery__list-item">{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+<section class="calendar">
+  <div class="container">
+    <ul class="calendar__list">
+      <li class="calendar__item" data-month-num="1">Січень</li>
+      <li class="calendar__item" data-month-num="2">Лютий</li>
+      <li class="calendar__item" data-month-num="3">Березень</li>
+      <li class="calendar__item" data-month-num="4">Квітень</li>
+      <li class="calendar__item" data-month-num="5">Травень</li>
+      <li class="calendar__item" data-month-num="6">Червень</li>
+      <li class="calendar__item" data-month-num="7">Липень</li>
+      <li class="calendar__item" data-month-num="8">Серпень</li>
+      <li class="calendar__item" data-month-num="9">Вересень</li>
+      <li class="calendar__item" data-month-num="10">Жовтень</li>
+      <li class="calendar__item" data-month-num="11">Листопад</li>
+      <li class="calendar__item" data-month-num="12">Грудень</li>
+    </ul>
+  </div>
+</section>

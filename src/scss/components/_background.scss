@@ -1,0 +1,24 @@
+.hero__background {
+  position: relative;
+  min-height: 100vh;
+  padding: 24px 0;
+  color: #fff;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__background--desc {
+  background-image: url("../images/desc-background.jpg");
+  min-height: 70vh;
+}
+.hero__background--search {
+  background-image: url("../images/search-background.jpg");
+  min-height: 70vh;
+}
+
+.hero__background--desc > .hero,
+.hero__background--search > .hero {
+  padding-top: 190px;
+}
