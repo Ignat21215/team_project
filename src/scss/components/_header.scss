@@ -1,35 +1,5 @@
 @use "../utils/variables" as *;
 
-.header {
-  position: relative;
-  min-height: 100vh;
-  padding: 24px 0;
-  color: #fff;
-  background-image: url("../images/header.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.search__header,
-.desc__header {
-  min-height: 0;
-}
-
-.search__header {
-  background-image: url("../images/search-header.jpg");
-}
-
-.desc__header {
-  background-image: url("../images/desc-header.jpg");
-}
-
-.header__container {
-  display: flex;
-  flex-direction: column;
-  min-height: 550px;
-}
-
 .header__nav {
   display: flex;
   align-items: center;
@@ -74,22 +44,4 @@
 
 .header__button:hover {
   background-color: $accent;
-}
-
-.header__hero {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.header__title {
-  margin: 0;
-  font-size: 36px;
-  font-family: "Kavoon", sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #fff;
-  width: 730px;
 }
