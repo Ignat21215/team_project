@@ -23,6 +23,7 @@
     flex-wrap: wrap;
   }
   &__item {
+    position: relative;
     border-radius: 24px;
     border-width: 1px;
     border-color: $gray;
@@ -30,6 +31,7 @@
     overflow: hidden;
     &-img{
       width: 300px;
+      height: 200px;
     }
     &-wrapper {
       box-shadow: 0 10px 25px -5px $gray;
@@ -39,6 +41,9 @@
       padding-right: 40px;
     }
     &-activity {
+      top: 19px;
+      right: 19px;
+      position: absolute;
       font-size: 10px;
       padding: 4px 16px;
       background-color: $accent;

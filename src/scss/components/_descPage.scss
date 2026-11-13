@@ -1,5 +1,118 @@
 @use "../utils/variables" as *;
 
-.hero__subtitle {
-    color: $black;
+.main {
+  .hero {
+    background-color: rgba(0, 0, 0, 0.151);
+    &__subtitle {
+      color: $black;
+    }
+    &__title {
+      color: $black;
+      margin: 0 auto;
+      font-size: 48px;
+    }
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 200px;
+    }
+    &__desc {
+      max-width: 450px;
+      font-size: 18px;
+      text-align: left;
+    }
+    &__features {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px -5px $gray;
+
+      &-title {
+        font-size: 18px;
+        margin: 0 auto;
+        padding-block: 8px;
+        background-color: $accent;
+        margin-bottom: 32px;
+      }
+      &-list {
+        padding-inline: 24px;
+        padding-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: left;
+      }
+    }
+  }
+  .map {
+    padding-block: 50px;
+    &__frame {
+      display: block;
+      margin: 0 auto;
+      width: 768px;
+      height: 384px;
+      border: 2px $black solid;
+      box-shadow: 0 0 10px -5px $gray;
+      border-radius: 30px;
+    }
+  }
+  .calendar {
+    padding-bottom: 50px;
+    &__title {
+      font-size: 28px;
+    }
+    &__list {
+      transform: translate(7%);
+      display: inline-block;
+      border: 1px $black solid;
+      box-shadow: 0 0 10px -5px $gray;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+    &__item {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+  .gallery {
+    padding-bottom: 50px;
+    position: relative;
+    &__item {
+      transition-duration: 1000ms;
+    }
+    &__img {
+      background-color: $gray;
+      border-radius: 30px;
+      width: 400px;
+      height: 400px;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+    &__swipe {
+      position: absolute;
+      width: 50px;
+      color: $black;
+      top: 100px;
+      font-size: 50px;
+
+      &--left {
+        left: 150px;
+      }
+
+      &--right {
+        right: 150px;
+      }
+    }
+  }
+}
+
+.perfectMonth {
+  background-color: rgb(104, 248, 94);
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
 }

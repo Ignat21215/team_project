@@ -126,6 +126,6 @@ export async function renderCards(arr) {
             searchingList.insertAdjacentHTML('beforeend', html);
         });
     } else {
-        initCards(await fetching(API + 'destinations'))
+        initCards(await fetching(API))
     }
 }
