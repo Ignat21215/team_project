@@ -470,6 +470,9 @@ body {
   text-align: center;
   padding-top: 260px;
   padding-bottom: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__title {
@@ -714,8 +717,13 @@ body {
   margin: 0;
 }
 
+.main .hero .container {
+  background-color: rgba(255, 255, 255, 0.232);
+  border-radius: 30px;
+  padding-block: 50px;
+}
 .main .hero {
-  background-color: rgba(0, 0, 0, 0.151);
+  background-color: rgba(0, 0, 0, 0.223);
 }
 .main .hero__subtitle {
   color: rgb(27, 22, 14);
@@ -745,8 +753,10 @@ body {
 .main .hero__features {
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid rgb(27, 22, 14);
   -webkit-box-shadow: 0 0 10px -5px rgb(48, 45, 39);
           box-shadow: 0 0 10px -5px rgb(48, 45, 39);
+  background-color: rgba(255, 255, 255, 0.505);
 }
 .main .hero__features-title {
   font-size: 18px;
