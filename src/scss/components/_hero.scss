@@ -1,17 +1,10 @@
-.hero {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 260px;
-  padding-bottom: 220px;
-}
-
-.hero__title {
+.title {
   margin: 0;
   font-size: 36px;
+  text-align: center;
   font-family: "Kavoon", sans-serif;
   font-weight: 400;
   line-height: 1.2;
   color: #fff;
-  width: 730px;
+  padding-top: 260px;
 }
