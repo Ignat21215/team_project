@@ -2,17 +2,18 @@
 
 .main {
   .hero {
+    color: $white-light;
     .container{
-      background-color: rgba(255, 255, 255, 0.232);
+      background-color: rgba(0, 0, 0, 0.232);
       border-radius: 30px;
       padding-block: 50px;
     }
     background-color: rgba(0, 0, 0, 0.223);
     &__subtitle {
-      color: $black;
+      color: $white-light;
     }
     &__title {
-      color: $black;
+      color: $white-light;
       margin: 0 auto;
       font-size: 48px;
     }
