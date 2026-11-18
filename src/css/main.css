@@ -372,30 +372,11 @@ body {
   padding: 10px 52px;
 }
 
-.hero__background {
-  position: relative;
-  min-height: 100vh;
-  padding: 24px 0;
-  color: #fff;
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero__background--desc {
-  background-image: url("../images/desc-background.jpg");
-  min-height: 70vh;
-}
-
-.hero__background--search {
-  background-image: url("../images/search-background.jpg");
-  min-height: 70vh;
-}
-
-.hero__background--desc > .hero,
-.hero__background--search > .hero {
-  padding-top: 190px;
+.header {
+  padding: 40px 0 0;
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
 }
 
 .header__nav {
@@ -409,6 +390,7 @@ body {
       justify-content: space-around;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  color: rgb(255, 255, 255);
 }
 
 .header__logo {
@@ -446,20 +428,6 @@ body {
   transition: opacity 0.2s;
 }
 
-.header__link:hover {
-  opacity: 0.7;
-}
-
-.header__icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
-.header__button:hover {
-  background-color: #ff9f4a;
-}
-
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,12 +435,31 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  padding-top: 260px;
-  padding-bottom: 220px;
+  padding-top: 290px;
+  padding-bottom: 270px;
+  background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.hero--search {
+  padding-top: 210px;
+  padding-bottom: 220px;
+  background-image: url("../images/search-background.jpg");
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__title {
@@ -480,6 +467,7 @@ body {
   font-size: 36px;
   font-family: "Kavoon", sans-serif;
   font-weight: 400;
+  text-align: center;
   line-height: 1.2;
   color: #fff;
   width: 730px;

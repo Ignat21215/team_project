@@ -1,12 +1,24 @@
 .hero {
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding-top: 260px;
-  padding-bottom: 220px;
+  padding-top: 290px;
+  padding-bottom: 270px;
+  background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.hero--search {
+  padding-top: 210px;
+  padding-bottom: 220px;
+  background-image: url("../images/search-background.jpg");
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero__title {
@@ -14,6 +26,7 @@
   font-size: 36px;
   font-family: "Kavoon", sans-serif;
   font-weight: 400;
+  text-align: center;
   line-height: 1.2;
   color: #fff;
   width: 730px;
